@@ -1,8 +1,24 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../Asset/fast-delivery.svg'
+import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
+import { FaUser } from 'react-icons/fa'
 const Header = () => {
+    const { user, logOut } = useContext(AuthContext)
+    const handleLogOut = () => {
+        logOut(user)
+            .then(result => {
+                const user = result.user
+                console.log(user);
+            })
+            .catch(error => {
+                console.log('error', error)
+            })
+    }
     const menuItems = <>
         <li><Link to='/' className='font-semibold'>Home</Link></li>
+        <li><Link to='/login' className='font-semibold'>Log In</Link></li>
+        <button onClick={handleLogOut} className='btn btn-ghost'>Log out</button>
     </>
     return (
         <div>
@@ -28,7 +44,11 @@ const Header = () => {
                 <div className="navbar-end">
                     <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
-                            <img alt='' src="https://placeimg.com/80/80/people" />
+                            {user?.email ?
+                                <img alt='' src={user.photoURL} />
+                                :
+                                <p className='mt-2'><FaUser></FaUser></p>
+                            }
                         </div>
                     </label>
                 </div>

@@ -5,7 +5,7 @@ import img3 from '../../../Asset/banner/3rd.jpeg'
 import logo from '../../../Asset/fast-delivery.svg'
 const Banner = () => {
     return (
-        <div className="carousel w-full">
+        <div className="carousel w-full rounded-md mb-20">
             <div id="slide1" className="carousel-item relative w-full">
                 <img alt='' src={img1} className="w-full" />
                 <div className="absolute flex justify-end transform -translate-y-1/2 left-24  bottom-0">

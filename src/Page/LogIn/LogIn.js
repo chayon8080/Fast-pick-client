@@ -1,17 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const LogIn = () => {
+    const { logIn } = useContext(AuthContext)
     const handleLogIn = e => {
         e.preventDefault()
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
-        // logIn(email, password)
-        //     .then(result => {
-        //         const user = result.user;
-        //         console.log(user)
-        //     })
-        //     .catch(err => console.error(err))
+        logIn(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user)
+            })
+            .catch(err => console.error(err))
+        form.reset();
     }
     return (
         <div>
@@ -39,7 +43,7 @@ const LogIn = () => {
                                 <input type="submit" value="LogIn" className="btn btn-primary" />
                             </div>
                         </form>
-                        {/* <p>New to account? <Link to='/signup' className=" text-center font-semibold text-orange-600">SignUp</Link></p> */}
+                        <p>New to account? <Link to='/register' className=" text-center font-semibold text-teal-500">Register</Link></p>
                     </div>
                 </div>
             </div>
