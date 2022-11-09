@@ -18,11 +18,27 @@ const Details = () => {
             service: _id,
             serviceName: title,
             customer: name,
-            Number,
             email,
             Review
         }
+        fetch('http://localhost:5000/reviews', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(order)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.acknowledged) {
+                    alert('Review placed successfully');
+                    form.reset();
+                }
+            })
+            .catch(err => console.error(err))
     }
+
     return (
         < div className='flex flex-col lg:flex-row'>
             <div className="card w-96 bg-base-100 shadow-xl lg:mr-20">
