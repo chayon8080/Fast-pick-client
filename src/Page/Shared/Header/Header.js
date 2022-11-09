@@ -18,6 +18,7 @@ const Header = () => {
     const menuItems = <>
         <li><Link to='/' className='font-semibold'>Home</Link></li>
         <li><Link to='/login' className='font-semibold'>Log In</Link></li>
+        <li><Link to='/userReviews' className='font-semibold'>My Reviews</Link></li>
         <button onClick={handleLogOut} className='btn btn-ghost'>Log out</button>
     </>
     return (
