@@ -1,0 +1,50 @@
+[
+    {
+        "_id": "635a0c0b64a6d231228942ae",
+        "service_id": "01",
+        "title": "Food Delivery",
+        "img": "https://ibb.co/ZLRsscW",
+        "price": "5.00",
+        "description": "Retail food delivery is a courier service in which a restaurant, store, or independent food-delivery company delivers food to a customer. An order is typically made either through a restaurant or grocer's website or mobile app, or through a food ordering company. The delivered items can include entrees, sides, drinks, desserts, or grocery items and are typically delivered in boxes or bags. The delivery person will normally drive a car, but in bigger cities where homes and restaurants are closer together, they may use bikes or motorized scooters."
+    },
+    {
+        "_id": "635a0c0b64a6d231228942af",
+        "service_id": "02",
+        "title": "Global currier service",
+        "img": "https://ibb.co/Yd0d6qq",
+        "price": "50.00",
+        "description": "The Global Courier and Delivery Services industry comprises two segments, which include larger couriers and smaller local delivery companies. Together, these segments provide air, surface and express courier delivery services of parcels, documents and packages to a wide variety of consumers. Over the past five years, many developments in the online retailing space have driven industry growth. However, internet use has diminished the need for shipment of some goods, such as documents that can be scanned and sent electronically. Over the five years to 2024, demand for courier and delivery services is expected to grow. Demand for high-end, time-sensitive goods will likely rise as a result of increased consumer spending."
+    },
+    {
+        "_id": "635b591a1dafe382a9da8c96",
+        "service_id": "03",
+        "title": "Local currier service",
+        "img": "https://ibb.co/K2CRbH6",
+        "price": "20.00",
+        "description": "Courier service refers to the fast or quick, door to door pickup and delivery service for goods or documents. It can be local or international. A company that provides such delivery services is called a courier company. A courier company hires people to provide their services"
+    },
+    {
+        "_id": "635b5afc1dafe382a9da8c98",
+        "service_id": "04",
+        "title": "Delivery on demand service",
+        "img": "https://ibb.co/BCtwQmq",
+        "price": "15.00",
+        "description": "In the e-commerce world, on-demand delivery simply means that customers have a choice to decide not just where they would like their products to be delivered, but also when — that is within the shortest delivery time possible. The customers can also track their shipments and plan their schedules accordingly."
+    },
+    {
+        "_id": "635b5b691dafe382a9da8c99",
+        "service_id": "05",
+        "title": "Product delivery",
+        "img": "https://ibb.co/t8ydWwX",
+        "price": "5.00",
+        "description": "Delivery Services are billable services that are directly associated with a product in a sales order or a return order, for example, the delivery of a high-definition television. Stand-alone delivery service lines can also be created, and if required, associated with a product at a later time."
+    },
+    {
+        "_id": "635b5ba51dafe382a9da8c9a",
+        "service_id": "06",
+        "title": "File delivery",
+        "img": "https://ibb.co/hyd2RdD",
+        "price": "20.00",
+        "description": "The File Delivery Service (FDS) can deliver any file type in the DRS to a web browser as long as the file is enabled for public delivery (i.e., it's DRS file access flag is set to P or b). The exception is still image files, which are not deliverable by FDS at this time. If the file delivered by FDS is natively supported by web browsers, it will display/play directly in the browser. For files not natively supported in the browser, the user will be prompted to save the file to a local computer where it can be opened and viewed using local rendering applications."
+    }
+]
