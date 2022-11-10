@@ -6,9 +6,9 @@ import DetailsHolder from './DetailsHolder';
 
 const Details = () => {
     const service = useLoaderData();
-    console.log(service)
     const { user } = useContext(AuthContext)
     const { _id, title, price, img, description } = service;
+    console.log(description, 'description')
     const handleSubmit = e => {
         e.preventDefault();
         const form = e.target;
