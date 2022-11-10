@@ -4,6 +4,7 @@ import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const Details = () => {
     const service = useLoaderData();
+    console.log(service)
     const { user } = useContext(AuthContext)
     const { _id, title, price, img, description } = service;
 
@@ -51,6 +52,9 @@ const Details = () => {
             </div>
             <div className="ms-5">
                 <form onSubmit={handleOrder}>
+                    <div>
+
+                    </div>
                     <div>
                         <input name="name" type="text" placeholder="First Name" defaultValue={user?.displayName} className="input w-full input-bordered  bg-slate-400" />
                         <input name="email" type="text" placeholder="Email" defaultValue={user?.email} className="input w-full input-bordered  bg-slate-400" readOnly />
