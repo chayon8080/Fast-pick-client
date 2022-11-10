@@ -1,14 +1,14 @@
 import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import DetailsHolder from './DetailsHolder';
 
 const Details = () => {
     const service = useLoaderData();
     console.log(service)
     const { user } = useContext(AuthContext)
     const { _id, title, price, img, description } = service;
-
-    const handleOrder = e => {
+    const handleSubmit = e => {
         e.preventDefault();
         const form = e.target;
         const name = user?.displayName || form.name.value;
@@ -51,9 +51,9 @@ const Details = () => {
                 </div>
             </div>
             <div className="ms-5">
-                <form onSubmit={handleOrder}>
+                <form onSubmit={handleSubmit}>
                     <div>
-
+                        <DetailsHolder></DetailsHolder>
                     </div>
                     <div>
                         <input name="name" type="text" placeholder="First Name" defaultValue={user?.displayName} className="input w-full input-bordered  bg-slate-400" />

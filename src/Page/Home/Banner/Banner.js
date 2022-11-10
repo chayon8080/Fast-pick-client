@@ -9,7 +9,7 @@ const Banner = () => {
             <div id="slide1" className="carousel-item relative w-full">
                 <img alt='' src={img1} className="w-full" />
                 <div className="absolute flex justify-end transform -translate-y-1/2 left-24  bottom-0">
-                    <img className='rounded h-20 w-20' src={logo} alt="" /> <h1 className='text-bold font-bold text-white italic'>Fast-pick Delivery service</h1>
+                    <img className='rounded h-20 w-20' src={logo} alt="" /> <h1 className='text-bold font-bold text-white italic text-yellow-300'>Fast-pick Delivery service</h1>
                 </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     <a href="#slide4" className="btn btn-circle">❮</a>

@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import ServicesCard from './ServicesCard';
+import Allservice from './Allservice';
 
-const Services = () => {
+
+
+const ServiceHolder = () => {
     const [services, setServices] = useState([])
     useEffect(() => {
         fetch('http://localhost:5000/services')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
-    const serviceLimit = services.slice(0, 3)
     return (
         <div>
             <div className=' mb-5'>
@@ -19,21 +19,14 @@ const Services = () => {
             </div>
             <div className='grid gap-6 grid-cols-1 md:grid-cols-1 lg:grid-cols-2 '>
                 {
-                    serviceLimit.map(service => <ServicesCard
+                    services.map(service => <Allservice
                         key={service._id}
                         service={service}
-                    ></ServicesCard>)
+                    ></Allservice>)
                 }
-            </div>
-            <div className='mt-5 text-center'>
-                <Link to='/services'>
-                    <button className='btn btn-outline btn-error rounded'>
-                        See all services
-                    </button>
-                </Link>
             </div>
         </div>
     );
 };
 
-export default Services;
+export default ServiceHolder;
