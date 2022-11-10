@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import PrivateRoutes from '../Privateroutes/PrivateRoutes';
 import DetailsHolder from './DetailsHolder';
 
 const Details = () => {
@@ -53,13 +54,13 @@ const Details = () => {
             <div className="ms-5">
                 <form onSubmit={handleSubmit}>
                     <div>
-                        <DetailsHolder></DetailsHolder>
+                        <PrivateRoutes><DetailsHolder></DetailsHolder></PrivateRoutes>
                     </div>
                     <div>
                         <input name="name" type="text" placeholder="First Name" defaultValue={user?.displayName} className="input w-full input-bordered  bg-slate-400" />
                         <input name="email" type="text" placeholder="Email" defaultValue={user?.email} className="input w-full input-bordered  bg-slate-400" readOnly />
                     </div>
-                    <textarea name='review' className="textarea textarea-bordered h-24 w-full" placeholder="Review"></textarea>
+                    <textarea name='Review' className="textarea textarea-bordered h-24 w-full" placeholder="Review"></textarea>
                     <input className='btn btn-secondary  bg-slate-400' type="submit" value="Post" />
                 </form>
             </div>

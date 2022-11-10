@@ -17,10 +17,19 @@ const Header = () => {
     }
     const menuItems = <>
         <li><Link to='/' className='font-semibold'>Home</Link></li>
-        <li><Link to='/login' className='font-semibold'>Log In</Link></li>
-        <li><Link to='/userReviews' className='font-semibold'>My Reviews</Link></li>
+
+        {
+            user?.email ?
+                <>
+                    <li><Link to='/userReviews' className='font-semibold'>My Reviews</Link></li>
+                    <li><Link to='/addservice' className='font-semibold'>Add Services</Link></li>
+                    <button onClick={handleLogOut} className='btn btn-ghost'>Log out</button>
+                </>
+                :
+                <li><Link to='/login' className='font-semibold'>Log In</Link></li>
+
+        }
         <li><Link to='/blogs' className='font-semibold'>Blogs</Link></li>
-        <button onClick={handleLogOut} className='btn btn-ghost'>Log out</button>
     </>
     return (
         <div>
